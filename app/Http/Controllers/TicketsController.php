@@ -7,10 +7,11 @@ use App\Category;
 
 class TicketsController extends Controller
 {
+    protected $table = 'tickets'; 
     public function create(){
-    $categories = Category::all();
+        $categories = Category::all();
 
-    return view('tickets.create', compact('categories'));
+        return view('tickets.create', compact('categories'));
     }
     
 }
